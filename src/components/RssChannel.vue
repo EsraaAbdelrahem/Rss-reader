@@ -1,11 +1,11 @@
 <template>
   <div class="reader-container col-md-12">
     <p class="reader-title pt-2">
-       <b> {{ readerData.feed.title }} </b>
+      <b> {{ readerData.feed.title }} </b>
     </p>
     <sequential-entrance fromTop>
       <div
-        v-for="item in readerData.items.slice(0,7)"
+        v-for="item in readerData.items.slice(0, 7)"
         :key="item.pubDate"
         class="one-news col-md-4 d-inline-flex p-1">
         <section class="news-body p-3">
@@ -64,15 +64,10 @@ export default {
       .news-date {
         top: 70px;
       }
-      .news-content {
-        @media (min-device-width: 280px) and (max-device-width: 1024px) {
-          display: none;
-        }
-      }
     }
-    .news-image {
-      width: inherit;
-    }
+  }
+  .news-image {
+    width: inherit;
   }
 }
 </style>
