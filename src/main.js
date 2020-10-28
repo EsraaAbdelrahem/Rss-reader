@@ -7,9 +7,6 @@ import { BootstrapVue } from "bootstrap-vue"
 import SequentialEntrance from 'vue-sequential-entrance'
 import 'vue-sequential-entrance/vue-sequential-entrance.css'
 
-
-
-
 /* "components section"
 we define the components globally we can separate them into another
 file but in our case we don't need to do so as the app is not big

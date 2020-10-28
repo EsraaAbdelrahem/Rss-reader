@@ -28,7 +28,6 @@ export default {
         )
         .then((response) => {
           commit("SET_READER_DATA", response);
-          console.log(response);
         })
         .catch((error) => {
           console.log(error);
