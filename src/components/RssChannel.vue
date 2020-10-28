@@ -5,8 +5,8 @@
     </p>
     <sequential-entrance fromTop>
       <div
-        v-for="item in readerData.items.slice(0, 7)"
-        :key="item.pubDate"
+        v-for="(item,index) in readerData.items.slice(0, 9)"
+        :key="index"
         class="one-news col-md-4 d-inline-flex p-1">
         <section class="news-body p-3">
           <a :href="item.link" class="news-title">
