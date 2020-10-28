@@ -1,14 +1,13 @@
 <template>
   <div class="reader-container col-md-12">
     <p class="reader-title pt-2">
-        {{ readerData.feed.title }}
+       <b> {{ readerData.feed.title }} </b>
     </p>
     <sequential-entrance fromTop>
       <div
         v-for="item in readerData.items.slice(0,7)"
         :key="item.pubDate"
-        class="one-news col-md-4 d-inline-flex p-1"
-      >
+        class="one-news col-md-4 d-inline-flex p-1">
         <section class="news-body p-3">
           <a :href="item.link" class="news-title">
             <b>
