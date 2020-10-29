@@ -3,7 +3,7 @@
     <p class="reader-title pt-2">
       <b> {{ readerData.feed.title }} </b>
     </p>
-    <sequential-entrance fromTop>
+    <sequential-entrance tag="div" fromTop>
       <div
         v-for="(item, index) in readerData.items.slice(0, 9)"
         :key="index"
