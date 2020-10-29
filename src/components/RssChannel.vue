@@ -45,6 +45,7 @@ export default {
 <style lang="less" scoped>
 @white: #fff;
 .reader-container {
+  margin: 20px 0;
   .one-news {
     position: relative;
     box-shadow: 0px 0px 5px rgba(129, 129, 212, 0.8);
