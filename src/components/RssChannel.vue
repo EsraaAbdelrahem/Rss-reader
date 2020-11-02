@@ -51,7 +51,7 @@ export default {
   margin: 20px 0;
   .news-container {
     display: inline-grid;
-    grid-template-columns: 35% 35% 35%;
+    grid-template-columns: 30% 30% 30%;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     .one-news:first-child {
