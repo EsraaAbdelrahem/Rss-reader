@@ -91,14 +91,12 @@ export default {
         position: absolute;
         box-sizing: border-box;
         color: @white;
+        bottom: 10px;
         .news-title {
           color: @white;
           @media (min-device-width: 768px) and (max-device-width: 1024px) {
             font-size: small;
           }
-        }
-        .news-date {
-          top: 70px;
         }
       }
     }
