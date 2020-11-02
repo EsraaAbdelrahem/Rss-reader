@@ -54,6 +54,9 @@ export default {
     grid-template-columns: 30% 30% 30%;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
+    @media (min-device-width: 280px) and (max-device-width: 700px) {
+      grid-template-columns: 100%;
+    }
     .one-news:first-child {
       grid-column-start: 1;
       grid-column-end: 3;
@@ -74,9 +77,6 @@ export default {
         grid-row-start: unset;
         grid-row-end: unset;
       }
-    }
-    @media (min-device-width: 280px) and (max-device-width: 700px) {
-      grid-template-columns: 100%;
     }
     .news-image {
       width: 100%;
