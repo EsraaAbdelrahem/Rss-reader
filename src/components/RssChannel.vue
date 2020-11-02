@@ -50,7 +50,7 @@ export default {
 .reader-container {
   margin: 20px 0;
   .news-container {
-    display: inline-grid;
+    display: grid;
     grid-template-columns: 30% 30% 30%;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
