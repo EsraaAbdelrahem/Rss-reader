@@ -66,6 +66,15 @@ export default {
       grid-row-start: 3;
       grid-row-end: 3;
     }
+    .one-news:last-child,
+    .one-news:first-child {
+      @media (min-device-width: 280px) and (max-device-width: 700px) {
+        grid-column-start: unset;
+        grid-column-end: unset;
+        grid-row-start: unset;
+        grid-row-end: unset;
+      }
+    }
     @media (min-device-width: 280px) and (max-device-width: 700px) {
       grid-template-columns: 100%;
     }
