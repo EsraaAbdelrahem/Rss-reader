@@ -9,7 +9,8 @@
           v-for="(item, index) in readerData.items"
           :key="index"
           v-show="index <= newsToShow"
-          class="one-news p-1">
+          class="one-news p-1"
+        >
           <section class="news-body p-2">
             <a :href="item.link" class="news-title">
               <b>
@@ -32,9 +33,9 @@
 import { mapGetters, mapActions } from "vuex";
 
 export default {
-   data: function () {
+  data: function () {
     return {
-     newsToShow: 6
+      newsToShow: 6,
     };
   },
   created: function () {
@@ -59,9 +60,9 @@ export default {
   margin: 20px 0;
   .news-container {
     display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-gap: 10px;
     @media (min-device-width: 280px) and (max-device-width: 700px) {
       grid-template-columns: 100%;
     }
@@ -72,25 +73,12 @@ export default {
     .one-news {
       position: relative;
       box-shadow: 0px 0px 5px rgba(129, 129, 212, 0.8);
-      .news-body {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        box-sizing: border-box;
-        color: @white;
-        bottom: 10px;
-        .news-title {
-          color: @white;
-          @media (min-device-width: 768px) and (max-device-width: 1024px) {
-            font-size: small;
-          }
-        }
-      }
       &:first-child {
         grid-column-start: 1;
         grid-column-end: 3;
         grid-row-start: 1;
         grid-row-end: 2;
+        // grid-area: 1 / 1 / 2 / 4;
       }
       &:nth-child(7) {
         grid-column-start: 2;
@@ -105,6 +93,20 @@ export default {
           grid-column-end: unset;
           grid-row-start: unset;
           grid-row-end: unset;
+        }
+      }
+      .news-body {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        box-sizing: border-box;
+        color: @white;
+        bottom: 10px;
+        .news-title {
+          color: @white;
+          @media (min-device-width: 280px) and (max-device-width: 1024px) {
+            font-size: small;
+          }
         }
       }
     }
