@@ -60,7 +60,7 @@ export default {
   margin: 20px 0;
   .news-container {
     display: grid;
-    grid-template-columns: auto auto auto;
+    // grid-template-columns: auto auto auto;
     // grid-template-rows: 25% 20% 25% 20%;
     grid-gap: 10px;
     @media (min-device-width: 280px) and (max-device-width: 700px) {
