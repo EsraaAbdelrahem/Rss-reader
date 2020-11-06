@@ -6,10 +6,10 @@
     <sequential-entrance tag="div" fromTop>
       <div class="news-container">
         <div
-          v-for="(item, index) in readerData.items.slice(0, 7)"
+          v-for="(item, index) in readerData.items"
           :key="index"
-          class="one-news p-1"
-        >
+          v-show="index <= newsToShow"
+          class="one-news p-1">
           <section class="news-body p-2">
             <a :href="item.link" class="news-title">
               <b>
@@ -22,6 +22,9 @@
         </div>
       </div>
     </sequential-entrance>
+    <div class="load-more-section pt-3">
+      <button class="btn load-more-btn" @click="newsToShow++">Load more</button>
+    </div>
   </div>
 </template>
 
@@ -29,6 +32,11 @@
 import { mapGetters, mapActions } from "vuex";
 
 export default {
+   data: function () {
+    return {
+     newsToShow: 6
+    };
+  },
   created: function () {
     this.getData();
   },
@@ -84,14 +92,14 @@ export default {
         grid-row-start: 1;
         grid-row-end: 2;
       }
-      &:last-child {
+      &:nth-child(7) {
         grid-column-start: 2;
         grid-column-end: 4;
         grid-row-start: 3;
         grid-row-end: 3;
       }
-      &:last-child,
-      &:first-child {
+      &:first-child,
+      &:nth-child(7) {
         @media (min-device-width: 280px) and (max-device-width: 700px) {
           grid-column-start: unset;
           grid-column-end: unset;
@@ -99,6 +107,15 @@ export default {
           grid-row-end: unset;
         }
       }
+    }
+  }
+  .load-more-section {
+    display: flex;
+    justify-content: center;
+    .load-more-btn {
+      background-color: @white;
+      border: 1px solid black;
+      outline: none;
     }
   }
 }
