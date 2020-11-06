@@ -98,7 +98,7 @@ export default {
         grid-row-start: 3;
         grid-row-end: 3;
       }
-      &:last-child,
+      &:first-child,
       &:nth-child(7) {
         @media (min-device-width: 280px) and (max-device-width: 700px) {
           grid-column-start: unset;
