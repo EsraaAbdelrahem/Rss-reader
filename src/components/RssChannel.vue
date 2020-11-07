@@ -60,7 +60,7 @@ export default {
   margin: 20px 0;
   .news-container {
     display: grid;
-    // grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto;
     // grid-template-rows: 25% 20% 25% 20%;
     grid-gap: 10px;
     @media (min-device-width: 280px) and (max-device-width: 700px) {
@@ -70,11 +70,8 @@ export default {
       position: relative;
       box-shadow: 0px 0px 5px rgba(129, 129, 212, 0.8);
       &:first-child {
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 2;
-        // grid-area: 1 / 1 / 2 / 3;
+        grid-column: 1 / span 2;
+        grid-row: 1 / 2;
       }
       &:nth-child(7) {
         grid-column-start: 2;
